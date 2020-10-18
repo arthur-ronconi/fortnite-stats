@@ -22,14 +22,20 @@
   .btn {
     padding-left: 2rem;
     padding-right: 2rem;
+    font-weight: 700;
     &White {
       background-color: #fff;
       color: #8b73bf;
+      &:hover {
+        background-color: darken(#fff, 15%);
+        color: darken(#8b73bf, 15%);
+      }
     }
   }
   .input {
     background-color: #fff;
     opacity: 0.75;
+    height: 3rem;
     &::placeholder {
       color: #8b73bf;
       opacity: 1;
