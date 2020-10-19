@@ -6,7 +6,7 @@ export default function HomeContent({ news, dailyItems, upcomingItems }) {
         <div className="col-8">
           {news && <h2>News</h2>}
           <ul className={styles.ul}>
-            {news.news.slice(0, 10).map((item) => {
+            {news.news.slice(0, 5).map((item) => {
               if (item.image) {
                 return (
                   <li
