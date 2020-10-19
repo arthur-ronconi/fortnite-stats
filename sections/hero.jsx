@@ -27,7 +27,7 @@ export default function Hero({ link }) {
       <header className={`jumbotron jumbotron-fluid ${styles.jumbotron}`}>
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-lg-6">
               <div className={styles.content}>
                 {link && (
                   <Link href="/">
@@ -35,7 +35,9 @@ export default function Hero({ link }) {
                   </Link>
                 )}
 
-                <h1 className="display-4 main-heading">Fortnite Stats</h1>
+                <h1 className="display-4 main-heading text-center text-md-left">
+                  Fortnite Stats
+                </h1>
                 <form>
                   <div className="form-group">
                     <div className="input-group mb-3">
@@ -73,7 +75,7 @@ export default function Hero({ link }) {
                 </form>
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-6 d-none d-lg-block">
               <img src="/img/fortnite.png" alt="" />
             </div>
           </div>

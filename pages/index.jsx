@@ -1,17 +1,13 @@
-import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Api from "../utils/api";
-import Navbar from "../sections/navbar";
 import Hero from "../sections/hero";
 import HomeContent from "../sections/homecontent";
+import Seo from "../sections/seo";
 
 export default function Home({ news, dailyItems, upcomingItems }) {
   return (
     <div className={styles.body}>
-      <Head>
-        <title>Fortnite Stats</title>
-      </Head>
-      {/* <Navbar /> */}
+      <Seo />
       <Hero link={false} />
       <HomeContent
         news={news}

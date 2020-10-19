@@ -2,8 +2,8 @@
 .jumbotron {
   background: linear-gradient(
     157deg,
-    rgba(173, 150, 221, 1) 0%,
-    rgba(53, 8, 153, 1) 100%
+    rgb(173, 150, 221) 0%,
+    rgb(53, 8, 153) 100%
   );
   border-radius: 0;
   height: 23rem;
@@ -16,7 +16,7 @@
   }
 
   @include lg {
-    clip-path: polygon(0 0, 100% 0, 100% 78%, 22% 100%, 0 81%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 22% 100%, 0 80%);
     height: 27rem;
   }
   .btn {

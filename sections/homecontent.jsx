@@ -3,7 +3,7 @@ export default function HomeContent({ news, dailyItems, upcomingItems }) {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-8">
+        <div className="col-lg-8">
           {news && <h2>News</h2>}
           <ul className={styles.ul}>
             {news.news.slice(0, 5).map((item) => {
@@ -15,7 +15,7 @@ export default function HomeContent({ news, dailyItems, upcomingItems }) {
                   >
                     <img src={item.image} alt="" className="card-img" />
                     <div className="card-body">
-                      <h4 className="card-title primary">{item.title}</h4>
+                      <p className="card-title primary h4">{item.title}</p>
                       <p className="card-text">{item.body}</p>
                     </div>
                   </li>
@@ -24,7 +24,7 @@ export default function HomeContent({ news, dailyItems, upcomingItems }) {
             })}
           </ul>
         </div>
-        <div className="col-4">
+        <div className="col-lg-4">
           <div className="daily mb-5">
             {dailyItems && <h2>Daily Shop</h2>}
 

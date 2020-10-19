@@ -20,7 +20,7 @@ export default function User({ response }) {
           </div>
         </div>
         <div className="row">
-          <div className="col-4">
+          <div className="col-lg-4">
             <h3>Solo</h3>
             <ul>
               <li>
@@ -50,7 +50,7 @@ export default function User({ response }) {
               </li>
             </ul>
           </div>
-          <div className="col-4">
+          <div className="col-lg-4">
             <h3>Duo</h3>
             <ul>
               <li>
@@ -80,7 +80,7 @@ export default function User({ response }) {
               </li>
             </ul>
           </div>
-          <div className="col-4">
+          <div className="col-lg-4">
             <h3>Squad</h3>
             <ul>
               <li>
