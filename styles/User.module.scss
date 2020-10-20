@@ -1,0 +1,35 @@
+@import "./variables.scss";
+
+.stats {
+  ul {
+    list-style: none;
+    padding: 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    li {
+      font-family: $font-family-heading;
+      font-weight: $font-weight-bold;
+      padding: 0.5rem 1rem;
+      &:hover {
+        box-shadow: none;
+        transform: none;
+      }
+      &:nth-child(odd) {
+        background-color: #c3c3c3;
+      }
+      &:nth-child(even) {
+        background-color: #c3c3c363;
+      }
+    }
+  }
+}
+.stat {
+  font-family: $font-family-heading;
+  color: $primary;
+  font-size: 2rem;
+}
+.accountLevel {
+  color: $primary;
+  font-size: 2.75rem;
+  font-family: $font-family-heading;
+}

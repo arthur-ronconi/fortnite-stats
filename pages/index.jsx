@@ -3,6 +3,7 @@ import Api from "../utils/api";
 import Hero from "../sections/hero";
 import HomeContent from "../sections/homecontent";
 import Seo from "../sections/seo";
+import Footer from "../sections/footer";
 
 export default function Home({ news, dailyItems, upcomingItems }) {
   return (
@@ -14,6 +15,7 @@ export default function Home({ news, dailyItems, upcomingItems }) {
         dailyItems={dailyItems}
         upcomingItems={upcomingItems}
       />
+      <Footer />
     </div>
   );
 }

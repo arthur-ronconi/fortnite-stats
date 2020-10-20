@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import Hero from "../../sections/hero";
 import Api from "../../utils/api";
+import styles from "../../styles/User.module.scss";
+import Footer from "../../sections/footer";
 
 export default function User({ response }) {
   const router = useRouter();
@@ -13,40 +15,58 @@ export default function User({ response }) {
           <div className="col-12">
             <h2 className="display-4 ">{response.name}</h2>
             <h3>
-              {response.account.level
-                ? `Account level ${response.account.level}`
-                : "Account Level: Unavailable"}
+              Account level:
+              <span className={styles.accountLevel}>
+                {response.account.level
+                  ? ` ${response.account.level}`
+                  : " Unavailable"}
+              </span>
             </h3>
           </div>
         </div>
-        <div className="row">
+        <div className={`row ${styles.stats}`}>
           <div className="col-lg-4">
             <h3>Solo</h3>
             <ul>
               <li>
-                {response.global_stats
-                  ? `K/D ratio: ${response.global_stats.solo.kd}`
-                  : "Unavailable"}
+                K/D ratio:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.solo.kd}`
+                    : " Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Kills: ${response.global_stats.solo.kills}`
-                  : "Unavailable"}
+                Kills:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.solo.kills}`
+                    : "Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Wins: ${response.global_stats.solo.placetop1}`
-                  : "Unavailable"}
+                Wins:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.solo.placetop1}`
+                    : "Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Matches played: ${response.global_stats.solo.matchesplayed}`
-                  : "Unavailable"}
+                Matches played:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.solo.matchesplayed}`
+                    : "Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Players outlived: ${response.global_stats.solo.playersoutlived}`
-                  : "Unavailable"}
+                Players outlived:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.solo.playersoutlived}`
+                    : "Unavailable"}
+                </span>
               </li>
             </ul>
           </div>
@@ -54,29 +74,44 @@ export default function User({ response }) {
             <h3>Duo</h3>
             <ul>
               <li>
-                {response.global_stats
-                  ? `K/D ratio: ${response.global_stats.duo.kd}`
-                  : "Unavailable"}
+                K/D ratio:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.duo.kd}`
+                    : " Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Kills: ${response.global_stats.duo.kills}`
-                  : "Unavailable"}
+                Kills:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.duo.kills}`
+                    : "Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Wins: ${response.global_stats.duo.placetop1}`
-                  : "Unavailable"}
+                Wins:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.duo.placetop1}`
+                    : "Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Matches played: ${response.global_stats.duo.matchesplayed}`
-                  : "Unavailable"}
+                Matches played:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.duo.matchesplayed}`
+                    : "Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Players outlived: ${response.global_stats.duo.playersoutlived}`
-                  : "Unavailable"}
+                Players outlived:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.duo.playersoutlived}`
+                    : "Unavailable"}
+                </span>
               </li>
             </ul>
           </div>
@@ -84,34 +119,50 @@ export default function User({ response }) {
             <h3>Squad</h3>
             <ul>
               <li>
-                {response.global_stats
-                  ? `K/D ratio: ${response.global_stats.squad.kd}`
-                  : "Unavailable"}
+                K/D ratio:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.squad.kd}`
+                    : " Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Kills: ${response.global_stats.squad.kills}`
-                  : "Unavailable"}
+                Kills:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.squad.kills}`
+                    : "Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Wins: ${response.global_stats.squad.placetop1}`
-                  : "Unavailable"}
+                Wins:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.squad.placetop1}`
+                    : "Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Matches played: ${response.global_stats.squad.matchesplayed}`
-                  : "Unavailable"}
+                Matches played:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.squad.matchesplayed}`
+                    : "Unavailable"}
+                </span>
               </li>
               <li>
-                {response.global_stats
-                  ? `Players outlived: ${response.global_stats.squad.playersoutlived}`
-                  : "Unavailable"}
+                Players outlived:
+                <span className={styles.stat}>
+                  {response.global_stats
+                    ? ` ${response.global_stats.squad.playersoutlived}`
+                    : "Unavailable"}
+                </span>
               </li>
             </ul>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
