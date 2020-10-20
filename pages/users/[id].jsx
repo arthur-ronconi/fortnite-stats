@@ -25,7 +25,7 @@ export default function User({ response }) {
           </div>
         </div>
         <div className={`row ${styles.stats}`}>
-          <div className="col-md-4">
+          <div className="col-md-4 category">
             <h3>Solo</h3>
             <ul>
               <li>
@@ -70,7 +70,7 @@ export default function User({ response }) {
               </li>
             </ul>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 category">
             <h3>Duo</h3>
             <ul>
               <li>
@@ -115,7 +115,7 @@ export default function User({ response }) {
               </li>
             </ul>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 category">
             <h3>Squad</h3>
             <ul>
               <li>
@@ -163,6 +163,11 @@ export default function User({ response }) {
         </div>
       </div>
       <Footer />
+      <style jsx>{`
+        .category {
+          margin-bottom: 2rem;
+        }
+      `}</style>
     </div>
   );
 }

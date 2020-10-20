@@ -19,7 +19,7 @@ export default function Hero({ link }) {
     const id = await response.account_id;
     setAccountId(await id);
     router.push("/users/" + (await id));
-    return setIsLoading(false);
+    // return setIsLoading(false);
   };
 
   return (
@@ -29,16 +29,15 @@ export default function Hero({ link }) {
           <div className="row">
             <div className="col-lg-6">
               <div className={styles.content}>
-                {link && (
-                  <Link href="/">
-                    <a className="text-light">{`<  Back`}</a>
-                  </Link>
-                )}
-
                 <h1 className="display-4 main-heading text-center text-md-left">
                   Fortnite Stats
                 </h1>
-                <form>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleClick();
+                  }}
+                >
                   <div className="form-group">
                     <div className="input-group mb-3">
                       <input
@@ -74,6 +73,11 @@ export default function Hero({ link }) {
                   </div>
                 </form>
               </div>
+              {link && (
+                <Link href="/">
+                  <a className="text-light">{`<  Back`}</a>
+                </Link>
+              )}
             </div>
             <div className="col-6 d-none d-lg-block">
               <img src="/img/fortnite.png" alt="" />
