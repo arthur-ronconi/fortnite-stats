@@ -25,6 +25,6 @@ export const getStaticProps = async () => {
   const upcomingItems = await Api().listUpcomingItems({ lang: "en" });
   return {
     props: { news, dailyItems, upcomingItems },
-    revalidate: 1800,
+    revalidate: 300,
   };
 };
