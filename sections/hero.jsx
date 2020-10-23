@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import styles from "../styles/Hero.module.scss";
@@ -19,8 +19,12 @@ export default function Hero({ link }) {
     const id = await response.account_id;
     setAccountId(await id);
     router.push("/users/" + (await id));
-    // return setIsLoading(false);
   };
+
+  useEffect(() => {
+    setIsLoading(true);
+    return setIsLoading(false);
+  }, [accountId]);
 
   return (
     <div>
