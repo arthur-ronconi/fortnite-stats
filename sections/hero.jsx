@@ -16,9 +16,14 @@ export default function Hero({ link }) {
   const handleClick = async () => {
     setIsLoading(true);
     const response = await fortniteAPI.getAccountIdByUsername(search);
-    const id = await response.account_id;
-    setAccountId(await id);
-    router.push("/users/" + (await id));
+    if (response.result === false) {
+      router.push("/error");
+    } else {
+      const id = await response.account_id;
+      setAccountId(await id);
+      console.log(response);
+      router.push("/users/" + (await id));
+    }
   };
 
   useEffect(() => {
