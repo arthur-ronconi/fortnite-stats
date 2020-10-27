@@ -38,7 +38,7 @@ export default function Hero({ link }) {
           <div className="row">
             <div className="col-lg-6">
               <div className={styles.content}>
-                <h1 className="display-4 main-heading text-center text-md-left">
+                <h1 className="display-4 main-heading text-center text-md-left mb-4">
                   Fortnite Stats
                 </h1>
                 <form
