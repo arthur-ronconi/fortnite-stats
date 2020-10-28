@@ -13,7 +13,11 @@ export default function HomeContent({ news, dailyItems, upcomingItems }) {
                     key={Math.random() * 100}
                     className="card p-0 border-0 mb-3"
                   >
-                    <img src={item.image} alt="" className="card-img" />
+                    <img
+                      src={`${item.image}?lqip`}
+                      alt=""
+                      className="card-img"
+                    />
                     <div className="card-body">
                       <p className="card-title primary h4">{item.title}</p>
                       <p className="card-text">{item.body}</p>
@@ -33,7 +37,7 @@ export default function HomeContent({ news, dailyItems, upcomingItems }) {
                 return (
                   <li key={item.id} className="col-6 p-0">
                     <img
-                      src={item.full_background}
+                      src={`${item.full_background}?lqip`}
                       alt=""
                       className="img-fluid w-100"
                     />
@@ -50,7 +54,7 @@ export default function HomeContent({ news, dailyItems, upcomingItems }) {
                 return (
                   <li key={item.id} className="col-4 p-0">
                     <img
-                      src={item.images.full_background}
+                      src={`${item.images.full_background}?lqip`}
                       alt=""
                       className="img-fluid"
                     />
