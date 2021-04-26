@@ -41,7 +41,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.solo.kills}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
               <li>
@@ -49,7 +49,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.solo.placetop1}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
               <li>
@@ -57,7 +57,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.solo.matchesplayed}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
               <li>
@@ -65,7 +65,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.solo.playersoutlived}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
             </ul>
@@ -86,7 +86,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.duo.kills}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
               <li>
@@ -94,7 +94,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.duo.placetop1}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
               <li>
@@ -102,7 +102,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.duo.matchesplayed}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
               <li>
@@ -110,7 +110,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.duo.playersoutlived}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
             </ul>
@@ -131,7 +131,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.squad.kills}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
               <li>
@@ -139,7 +139,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.squad.placetop1}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
               <li>
@@ -147,7 +147,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.squad.matchesplayed}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
               <li>
@@ -155,7 +155,7 @@ export default function User({ response }) {
                 <span className={styles.stat}>
                   {response.global_stats
                     ? ` ${response.global_stats.squad.playersoutlived}`
-                    : "Unavailable"}
+                    : " Unavailable"}
                 </span>
               </li>
             </ul>
